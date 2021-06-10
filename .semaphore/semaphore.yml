@@ -9,7 +9,7 @@ blocks:
     task:
       env_vars:
         - name: DATABASE_URL
-          value: 'aaofmahn2ok1yv.cudcheitntkq.us-east-1.rds.amazonaws.com:3306'
+          value: 'mysql2://username:password@localhost/database_name'
         - name: RAILS_ENV
           value: production
         - name: RDS_DB_NAME
@@ -29,7 +29,6 @@ blocks:
             - sem-service start mysql
             - sem-version ruby 2.6.7
             - cache restore
-            - echo $RDA_HOSTNAME
             - bundle install
             - 'bundle exec rake db:setup'
             - bundle exec rspec
