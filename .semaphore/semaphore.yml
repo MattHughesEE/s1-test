@@ -18,6 +18,10 @@ blocks:
           value: ebroot
         - name: RDS_PASSWORD
           value: Lola1799!
+        - name: RDS_HOSTNAME
+          value: aaofmahn2ok1yv.cudcheitntkq.us-east-1.rds.amazonaws.com
+        - name: RDS_PORT
+          value: '3306'
       jobs:
         - name: Test
           commands:
