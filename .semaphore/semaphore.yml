@@ -20,5 +20,5 @@ blocks:
             - sem-version ruby 2.6.7
             - cache restore
             - bundle install
-            - 'bundle exec rake db:migrate'
+            - 'RAILS_ENV=production bundle exec rake db:migrate'
             - bundle exec rspec
