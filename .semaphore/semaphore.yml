@@ -12,6 +12,12 @@ blocks:
           value: 'aaofmahn2ok1yv.cudcheitntkq.us-east-1.rds.amazonaws.com:3306'
         - name: RAILS_ENV
           value: production
+        - name: RDS_DB_NAME
+          value: aaofmahn2ok1yv
+        - name: RDS_USERNAME
+          value: ebroot
+        - name: RDS_PASSWORD
+          value: Lola1799!
       jobs:
         - name: Test
           commands:
@@ -19,6 +25,7 @@ blocks:
             - sem-service start mysql
             - sem-version ruby 2.6.7
             - cache restore
+            - echo $RDA_HOSTNAME
             - bundle install
             - 'bundle exec rake db:setup'
             - bundle exec rspec
