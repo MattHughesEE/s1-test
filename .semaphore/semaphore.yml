@@ -9,7 +9,7 @@ blocks:
     task:
       env_vars:
         - name: DATABASE_URL
-          value: 'mysql2://username:password@localhost/database_name'
+          value: 'mysql2://ebroot:Lola1799!@aaofmahn2ok1yv.cudcheitntkq.us-east-1.rds.amazonaws.com/aaofmahn2ok1yv'
         - name: RAILS_ENV
           value: production
         - name: RDS_DB_NAME
