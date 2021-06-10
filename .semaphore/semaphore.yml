@@ -11,7 +11,7 @@ blocks:
         - name: DATABASE_URL
           value: 'aaofmahn2ok1yv.cudcheitntkq.us-east-1.rds.amazonaws.com:3306'
         - name: RAILS_ENV
-          value: test
+          value: production
       jobs:
         - name: Test
           commands:
@@ -20,5 +20,5 @@ blocks:
             - sem-version ruby 2.6.7
             - cache restore
             - bundle install
-            - 'RAILS_ENV=production bundle exec rake db:migrate'
+            - 'bundle exec rake db:setup'
             - bundle exec rspec
