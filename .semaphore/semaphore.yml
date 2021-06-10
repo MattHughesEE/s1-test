@@ -19,6 +19,6 @@ blocks:
             - sem-service start mysql
             - sem-version ruby 2.6.7
             - cache restore
-            - bundle install --without production
+            - bundle install
             - 'bundle exec rake db:setup'
             - bundle exec rspec
